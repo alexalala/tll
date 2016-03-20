@@ -1,0 +1,24 @@
+{
+  "name": "galiria",
+  "version": "1.0.7",
+  "description": "minimal image gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armand1m/galiria.git"
+  },
+  "keywords": [
+    "image",
+    "gallery",
+    "minimal"
+  ],
+  "author": "Armando Magalhães <armando.mag95@gmail.com> (http://armand1m.herokuapp.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/armand1m/galiria/issues"
+  },
+  "homepage": "https://github.com/armand1m/galiria#readme"
+}

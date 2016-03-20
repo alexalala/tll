@@ -1,0 +1,23 @@
+{
+  "name": "galiria",
+  "description": "minimal image gallery",
+  "main": "build/galiria.js",
+  "authors": [
+    "Armando Magalhães <armando.mag95@gmail.com> (http://armand1m.herokuapp.com)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "image",
+    "gallery",
+    "minimal"
+  ],
+  "homepage": "https://github.com/armand1m/galiria",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

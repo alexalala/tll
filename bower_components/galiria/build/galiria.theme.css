@@ -1,0 +1,50 @@
+.galiria {
+  margin: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.galiria > figure {
+  width: 25%;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2 row;
+      -ms-flex: 2 row;
+          flex: 2 row;
+}
+
+.galiria > figure > img {
+  width: 100%;
+}
+
+.galiria > figure > img:hover {
+  cursor: pointer;
+  outline: 0.1em solid rgba(0,0,0, 0.4);
+}
+
+.galiria > figure > figcaption {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .galiria > figure {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+}

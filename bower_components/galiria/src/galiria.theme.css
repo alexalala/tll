@@ -1,0 +1,32 @@
+.galiria {
+  margin: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.galiria > figure {
+  width: 25%;
+  flex: 2 row;
+}
+
+.galiria > figure > img {
+  width: 100%;
+}
+
+.galiria > figure > img:hover {
+  cursor: pointer;
+  outline: 0.1em solid rgba(0,0,0, 0.4);
+}
+
+.galiria > figure > figcaption {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .galiria > figure {
+    flex-grow: 2;
+  }
+}
