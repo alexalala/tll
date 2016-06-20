@@ -13,11 +13,9 @@ body {
 }
 
 
-.title {
-	font-size: 100px;
-	font-family: 'EB Garamond', serif;
-	margin-top: 70px;
-	margin-bottom: 60px;
+img.logo {
+	display: block;
+	margin: 70px auto 30px auto;
 }
 
 .content {
@@ -65,10 +63,12 @@ body {
 
 .aboutTitle {
 	font-family: 'Josefin Sans', sans-serif;
+	color: #6C6C6C;
 	text-align: center;
 	margin-top: 4%;
 	margin-bottom: 5%;
 }
 .aboutContent {
 	margin-top: 7%;
+	color: #343333;
 }
