@@ -16,6 +16,8 @@ body {
 img.logo {
 	display: block;
 	margin: 70px auto 30px auto;
+	height: 300px;
+	width: 600px;
 }
 
 .content {
@@ -62,13 +64,16 @@ img.logo {
 }
 
 .aboutTitle {
-	font-family: 'Josefin Sans', sans-serif;
 	color: #6C6C6C;
 	text-align: center;
 	margin-top: 4%;
 	margin-bottom: 5%;
+	font-size: 50px; 
+	font-family: 'Open Sans', sans-serif;
 }
 .aboutContent {
 	margin-top: 7%;
 	color: #343333;
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
 }
