@@ -27,7 +27,7 @@ $(window).scroll(function() {
             var desc = imgDesc[descIndex];
             descIndex++;
             var image = value;
-            var $imgStyle = $('<div class="col-md-12 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + desc + '</figcaption><img class="img1" src="' + image + '"></figure></div>');
+            var $imgStyle = $('<div class="col-md-4 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + desc + '</figcaption><img class="img1" src="' + image + '"></figure></div>');
             images.push(value);
             imagesLeft.splice(value, 1); 
                         
