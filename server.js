@@ -24,6 +24,9 @@ app.get('/collections', function (req, res) {
     res.render('collections');
 });
 
+app.get('/imageView', function (req, res) {
+	res.render('imageView');
+});
 
 app.listen('3000', function() {
 	console.warn('Listening on port 3000, visit http://localhost:3000/');
