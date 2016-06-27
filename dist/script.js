@@ -38,7 +38,12 @@ $(window).scroll(function() {
     }
 });
 
-$(".img").click(function(location) {
-    var src = $(this).attr("alt")
-})
+$(".img1").click(function(location) {
+
+    window.location.href = '/imageView';
+    
+    var src = $(this).attr("alt");
+    
+});
+
 },{}]},{},[1]);
