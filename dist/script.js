@@ -27,22 +27,28 @@ $(window).scroll(function() {
             var desc = imgDesc[descIndex];
             descIndex++;
             var image = value;
-            var $imgStyle = $('<div class="col-md-4 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + desc + '</figcaption><img class="img1" src="' + image + '"></figure></div>');
+            var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + desc + '</figcaption><img class="img1" src="' + image + '"></figure></div>');
             images.push(value);
             imagesLeft.splice(value, 1); 
                         
-            $(".content").append($imgStyle);
+            $(".mainContent").append($imgStyle);
         });
         
 
     }
 });
 
-$(".img1").click(function(location) {
+
+$(".img1").click(function() {
 
     window.location.href = '/imageView';
-    
+
     var src = $(this).attr("alt");
+
+    //<img class="imgLg" src="img/pics/' + src + '.jpg" alt="' + src + '">
+    var $imgFiller = $('<p> poo </p>');
+
+    $(".content").append($imgFiller);
     
 });
 

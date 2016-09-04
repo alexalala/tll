@@ -25,15 +25,28 @@ $(window).scroll(function() {
         $.each(imagesTaken, function(index, value, imgDescription, descriptionIndex){
             var $desc = imgDescription[descriptionIndex];
             var $image = value;
-            var $imgStyle = $('<div class="col-md-4 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '"></figure></div>');
+            var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '"></figure></div>');
             images.push(value);
             imagesLeft.splice(value, 1);
             descriptionIndex++;
               
                         
-            $(".content").append($imgStyle);
+            $(".mainContent").append($imgStyle);
         });
         // append the html content in the variable to the end of the existing images in the DOM 
 
     }
+});
+
+$(".img1").click(function() {
+
+    window.location.href = '/imageView';
+
+    var src = $(this).attr("alt");
+
+    //<img class="imgLg" src="img/pics/' + src + '.jpg" alt="' + src + '">
+    var $imgFiller = $('<p> poo </p>');
+
+    $(".content").append($imgFiller);
+    
 });

@@ -20,8 +20,8 @@ app.get('/about', function (req, res) {
     res.render('about');
 });
 
-app.get('/collections', function (req, res) {
-    res.render('collections');
+app.get('/contact', function (req, res) {
+    res.render('contact');
 });
 
 app.get('/imageView', function (req, res) {
