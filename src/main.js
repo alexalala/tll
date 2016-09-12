@@ -41,13 +41,13 @@ $(window).scroll(function() {
         imagesTaken = imagesLeft.slice(0, imagesPerScreen);
 
         // loop through the images you have retrieved and make HTML using jQuery and store into a variable
-        $(imagesTaken).each(function(index, value, imgDescription, descriptionIndex){
-            var $desc = imgDescription[descriptionIndex];
-            var $image = value;
+        $(imagesTaken).each(function(index, value){
+            var $desc = value.description;
+            var $image = value.url;
             var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '"></figure></div>');
             images.push(value);
             imagesLeft.splice(value, 1);
-            descriptionIndex++;
+            
               
                         
             $(".mainContent").append($imgStyle);
