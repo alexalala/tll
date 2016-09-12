@@ -5,8 +5,27 @@ $(window).load(function() {
 });
 
 var images = [];
-var imagesLeft = ['img/pics/cameo.jpg', 'img/pics/carlisleStreetWavertree.jpg', 'img/pics/fallingStar.jpg', 'img/pics/gasWorksSpofforthRoad.jpg','img/pics/grandCinema.jpg','img/pics/hairdresser.jpg','img/pics/highStreetWavertree.jpg','img/pics/holyTrinity.jpg','img/pics/magnetCinema.jpg','img/pics/pictonClockTower.jpg', 'img/pics/pyeStreet.jpg', 'img/pics/railwaySidingsWavertree.jpg', 'img/pics/theLoversFirLane.jpg', 'img/pics/theStreetSinger.jpg', 'img/pics/theWellington.jpg', 'img/pics/victorianDrinkingFountain.jpg', 'img/pics/victorianLetterbox.jpg', 'img/pics/wavertreeTrainStation.jpg', 'img/pics/wellingtonAvenueWavertree.jpg'];
-var imgDescription = ['The Cameo Cinema', 'Carlisle Street, Wavertree', 'Falling Star', 'Spofforth Road Gas Works', 'Grand Cinema', 'Hairdresser', 'Wavertree High Street', 'Holy Trinity', 'Magnet Cinema', 'Picton Clock Tower', 'Pye Street', 'Railway Sidings, Wavertree', 'The Lovers, Fir Lane', 'The Street Singer', 'The Wellington', 'Victorian Drinking Fountain', 'Victorian Letterbox', 'Wavertree Train Station', 'Wellington Avenue, Wavertree'];
+var imagesLeft = [
+    {url:'img/pics/cameo.jpg', description:'The Cameo Cinema'}, 
+    {url:'img/pics/carlisleStreetWavertree.jpg', description:'Carlisle Street, Wavertree'}, 
+    {url:'img/pics/fallingStar.jpg', description:'Falling Star'}, 
+    {url:'img/pics/gasWorksSpofforthRoad.jpg', description:'Spofforth Road Gas Works'}, 
+    {url:'img/pics/grandCinema.jpg', description:'Grand Cinema'}, 
+    {url:'img/pics/hairdresser.jpg', description:'Hairdresser'}, 
+    {url:'img/pics/highStreetWavertree.jpg', description:'Wavertree High Street'}, 
+    {url:'img/pics/holyTrinity.jpg', description:'Holy Trinity'}, 
+    {url:'img/pics/magnetCinema.jpg', description:'Magnet Cinema'}, 
+    {url:'img/pics/pictonClockTower.jpg', description:'Picton Clock Tower'}, 
+    {url:'img/pics/pyeStreet.jpg', description:'Pye Street'}, 
+    {url:'img/pics/railwaySidingsWavertree.jpg', description:'Railway Sidings, Wavertree'}, 
+    {url:'img/pics/theLoversFirLane.jpg', description:'The Lovers, Fir Lane'}, 
+    {url:'img/pics/theStreetSinger.jpg', description:'The Street Singer'}, 
+    {url:'img/pics/theWellington.jpg', description:'The Wellington'}, 
+    {url:'img/pics/victorianDrinkingFountain.jpg', description:'Victorian Drinking Fountain'}, 
+    {url:'img/pics/victorianLetterbox.jpg', description:'Victorian Letterbox'}, 
+    {url:'img/pics/wavertreeTrainStation.jpg', description:'Wavertree Train Station'}, 
+    {url:'img/pics/wellingtonAvenueWavertree.jpg', description:'Wellington Avenue, Wavertree'}
+];
 var imagesPerScreen = 5;
 var imagesTaken;
 var descriptionIndex = 0;
