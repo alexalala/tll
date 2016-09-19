@@ -55,17 +55,18 @@ $(window).scroll(function() {
         // append the html content in the variable to the end of the existing images in the DOM 
 
     }
+
+    $("img").ready(function(){
+        $(".img1").click(function(){
+            window.location.href = '/imageView';
+        });
+    });
+
 });
 
-$(".img1").click(function() {
+var appender = function(){
 
-    window.location.href = '/imageView';
+        var $imgFiller = $("<p>Test</p>");
 
-    var src = $(this).attr("alt");
-
-    //<img class="imgLg" src="img/pics/' + src + '.jpg" alt="' + src + '">
-    var $imgFiller = $('<p> poo </p>');
-
-    $(".content").append($imgFiller);
-    
-});
+        $(".container").append($imgFiller);
+};
