@@ -67,6 +67,7 @@ img.logo {
 	text-align: center;
 	margin: auto;
 }
+
 .logo1 {
 	margin: 0 20px 0 0;
 }
@@ -79,9 +80,15 @@ img.logo {
 	font-size: 50px; 
 	font-family: 'Open Sans', sans-serif;
 }
+
 .aboutContent {
 	margin-top: 7%;
 	color: #343333;
 	font-size: 30px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.imgLarge {
+	max-width: 100%;
+	max-height: 1000px;
 }

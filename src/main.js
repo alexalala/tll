@@ -31,43 +31,45 @@ var descriptionIndex = 0;
 var offset = 50;
 var alreadyLoading;
 
-$(window).scroll(function() {
-    if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true)
-    { 
-        
-        alreadyloading = true;
-       
-        // take imagesPerScreen number of images out of imagesLeft and into its own variable
-        imagesTaken = imagesLeft.slice(0, imagesPerScreen);
-
-        // loop through the images you have retrieved and make HTML using jQuery and store into a variable
-        $(imagesTaken).each(function(index, value){
-            var $desc = value.description;
-            var $image = value.url;
-            var $sliceOffUrl = $image.slice(9);
-            var $simpleDesc = $sliceOffUrl.split('.')[0];
-            var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
-            images.push(value);
-            imagesLeft.splice(value, 1);
+if ($("body").data("title") === "gallery") {
+    $(window).scroll(function() {
+        if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true)
+        { 
             
-              
-                        
-            $(".mainContent").append($imgStyle);
+            alreadyloading = true;
+           
+            // take imagesPerScreen number of images out of imagesLeft and into its own variable
+            imagesTaken = imagesLeft.slice(0, imagesPerScreen);
+
+            // loop through the images you have retrieved and make HTML using jQuery and store into a variable
+            $(imagesTaken).each(function(index, value){
+                var $desc = value.description;
+                var $image = value.url;
+                var $sliceOffUrl = $image.slice(9);
+                var $simpleDesc = $sliceOffUrl.split('.')[0];
+                var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
+                images.push(value);
+                imagesLeft.splice(value, 1);
+                
+                  
+                            
+                $(".mainContent").append($imgStyle);
+            });
+            // append the html content in the variable to the end of the existing images in the DOM 
+
+        }
+
+        $("img").ready(function(){
+            $(".img1").click(function(){
+                var src = $(this).attr("alt");
+                window.location.href = '/imageView#' + src;
+
+                //document.getElementById('imageHolder').insertAdjacentHTML('afterbegin', '<p>poo</p>');
+            });
         });
-        // append the html content in the variable to the end of the existing images in the DOM 
 
-    }
-
-    $("img").ready(function(){
-        $(".img1").click(function(){
-            var src = $(this).attr("alt");
-            window.location.href = '/imageView#' + src;
-
-            //document.getElementById('imageHolder').insertAdjacentHTML('afterbegin', '<p>poo</p>');
-        });
     });
-
-});
+}
 
 
 
@@ -93,6 +95,10 @@ if ($("body").data("title") === "imageView") {
     //add description to imageViewer
     imageLongDesc = imageObject.description;
     $(".titleHolder").append('<h2>'+imageLongDesc+'</h2>');
+
+    //add image to imageViewer
+    imageUrl = imageObject.url;
+    $(".imageHolder").append('<img class="imgLarge" src="' + imageUrl + '">');
 }
 
 
