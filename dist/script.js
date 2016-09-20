@@ -45,7 +45,9 @@ $(window).scroll(function() {
         $(imagesTaken).each(function(index, value){
             var $desc = value.description;
             var $image = value.url;
-            var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '"></figure></div>');
+            var $sliceOffUrl = $image.slice(9);
+            var $simpleDesc = $sliceOffUrl.split('.')[0];
+            var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $desc + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
             images.push(value);
             imagesLeft.splice(value, 1);
             
@@ -67,6 +69,47 @@ $(window).scroll(function() {
     });
 
 });
+
+
+
+//image view code
+if ($("body").data("title") === "imageView") {
+    var imgDescription = location.hash.substr(1);
+
+    (function findFromHash() {
+
+        var imgDescription = location.hash.substr(1);
+        var findByUrl = 'img/pics/' + imgDescription + '.jpg';
+
+        function getDescription(obj){
+            return obj.url === findByUrl;
+        }
+        
+        console.log(imgDescription);
+        console.log(imagesLeft.find(getDescription));
+})();
+
+}
+
+//add description to imageViewer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
