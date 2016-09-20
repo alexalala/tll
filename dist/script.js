@@ -4,9 +4,18 @@ $(window).load(function() {
 		var galiria = new Galiria();
 });
 
+var preloadedImages = [
+    {url:'img/pics/abbeyCinema.jpg', name:'Abbey Cinema, Wavertree'},
+    {url:'img/pics/blueCoatSchool.jpg', name:'The Blue Coat School'},
+    {url:'img/pics/blighStreet.jpg', name:'Bligh Street, Wavertree'},
+    {url:'img/pics/banksyInLiverpool.jpg', name:'Banksy In Liverpool'},
+    {url:'img/pics/shankley.jpg', name: 'Bill Shankley'},
+    {url:'img/pics/cambridgeStreetMission', name: 'The Cambridge Street Mission, Wavertree'},
+    {url:'img/pics/cameo.jpg', name:'The Cameo Cinema'} 
+];
+
 var images = [];
 var imagesLeft = [
-    {url:'img/pics/cameo.jpg', name:'The Cameo Cinema'}, 
     {url:'img/pics/carlisleStreetWavertree.jpg', name:'Carlisle Street, Wavertree'}, 
     {url:'img/pics/fallingStar.jpg', name:'Falling Star'}, 
     {url:'img/pics/gasWorksSpofforthRoad.jpg', name:'Spofforth Road Gas Works'}, 
@@ -26,7 +35,7 @@ var imagesLeft = [
     {url:'img/pics/wavertreeTrainStation.jpg', name:'Wavertree Train Station'}, 
     {url:'img/pics/wellingtonAvenueWavertree.jpg', name:'Wellington Avenue, Wavertree'}
 ];
-var imagesPerScreen = 5;
+var imagesPerScreen = 6;
 var imagesTaken;
 var descriptionIndex = 0;
 var offset = 50;
@@ -91,14 +100,14 @@ if ($("body").data("title") === "imageView") {
             return obj.url === findByUrl;
         }
         
-        imageObject = imagesLeft.find(getDescription);
+        imageObject = imagesLeft.find(getDescription) || preloadedImages.find(getDescription);
     })();
 
-    //add description to imageViewer
+    //append description to imageViewer
     imageName = imageObject.name;
     $(".titleHolder").append('<h2 class="imageTitle">'+imageName+'</h2>');
 
-    //add image to imageViewer
+    //append image to imageViewer
     imageUrl = imageObject.url;
     $(".imageHolder").append('<img class="imgLarge" src="' + imageUrl + '">');
 }
