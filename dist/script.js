@@ -95,7 +95,7 @@ if ($("body").data("title") === "imageView") {
 
     //add description to imageViewer
     imageLongDesc = imageObject.description;
-    $(".titleHolder").append('<h2>'+imageLongDesc+'</h2>');
+    $(".titleHolder").append('<h2 class="imageTitle">'+imageLongDesc+'</h2>');
 
     //add image to imageViewer
     imageUrl = imageObject.url;

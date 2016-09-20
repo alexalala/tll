@@ -91,4 +91,12 @@ img.logo {
 .imgLarge {
 	max-width: 100%;
 	max-height: 1000px;
+	padding: 0 20px 0 20px;
+}
+
+.imageTitle {
+	color: #6C6C6C;
+	font-size: 50px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 30px 0 30px 0;
 }
