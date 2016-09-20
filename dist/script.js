@@ -59,17 +59,16 @@ $(window).scroll(function() {
 
     $("img").ready(function(){
         $(".img1").click(function(){
-            window.location.href = '/imageView';
+            var src = $(this).attr("alt");
+            window.location.href = '/imageView#' + src;
+
+            //document.getElementById('imageHolder').insertAdjacentHTML('afterbegin', '<p>poo</p>');
         });
     });
 
 });
 
-var appender = function(){
 
-        var $imgFiller = $("<p>Test</p>");
 
-        $(".container").append($imgFiller);
-};
 
 },{}]},{},[1]);
