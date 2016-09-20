@@ -39,6 +39,8 @@ img.logo {
 	max-width: 100%;
 	height: 400px;
 	text-align:center;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .captionjs figcaption {
