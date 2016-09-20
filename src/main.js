@@ -71,33 +71,29 @@ $(window).scroll(function() {
 
 
 
-//image view code
+//image view page code
 if ($("body").data("title") === "imageView") {
-    var imgDescription = location.hash.substr(1);
 
+    //get short desc from url
+    var imgShortDesc = location.hash.substr(1);
+    var imageObject;
+
+    //get object from hash
     (function findFromHash() {
 
-        var imgDescription = location.hash.substr(1);
-        var findByUrl = 'img/pics/' + imgDescription + '.jpg';
+        var findByUrl = 'img/pics/' + imgShortDesc + '.jpg';
 
         function getDescription(obj){
             return obj.url === findByUrl;
         }
         
-        console.log(imgDescription);
-        console.log(imagesLeft.find(getDescription));
-})();
+        imageObject = imagesLeft.find(getDescription);
+    })();
 
+    //add description to imageViewer
+    imageLongDesc = imageObject.description;
+    $(".titleHolder").append('<h2>'+imageLongDesc+'</h2>');
 }
-
-//add description to imageViewer
-
-
-
-
-
-
-
 
 
 
