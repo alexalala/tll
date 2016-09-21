@@ -62,19 +62,15 @@ if ($("body").data("title") === "gallery") {
                 imagesLeft.splice(value, 1);
                 
                   
-                            
+                // append the html content in the variable to the end of the existing images in the DOM             
                 $(".mainContent").append($imgStyle);
             });
-            // append the html content in the variable to the end of the existing images in the DOM 
-
         }
-
+        //on click load imageviewer and img description into hash
         $("img").ready(function(){
             $(".img1").click(function(){
                 var src = $(this).attr("alt");
                 window.location.href = '/imageView#' + src;
-
-                //document.getElementById('imageHolder').insertAdjacentHTML('afterbegin', '<p>poo</p>');
             });
         });
 
