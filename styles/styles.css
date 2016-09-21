@@ -93,7 +93,7 @@ img.logo {
 .imgLarge {
 	max-width: 100%;
 	max-height: 1000px;
-	padding: 0 20px 0 20px;
+	padding: 0 20px 15px 20px;
 }
 
 .imageTitle {
@@ -101,4 +101,9 @@ img.logo {
 	font-size: 50px;
 	font-family: 'Open Sans', sans-serif;
 	padding: 30px 0 30px 0;
+}
+
+.imgDescription {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
 }
