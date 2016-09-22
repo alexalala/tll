@@ -36,7 +36,6 @@ var imagesLeft = [
 ];
 var imagesPerScreen = 6;
 var imagesTaken;
-var descriptionIndex = 0;
 var offset = 50;
 var alreadyLoading;
 
@@ -46,7 +45,7 @@ if ($("body").data("title") === "gallery") {
         if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true)
         { 
             
-            alreadyloading = true;
+            alreadyLoading = true;
            
             // take imagesPerScreen number of images out of imagesLeft and into its own variable
             imagesTaken = imagesLeft.slice(0, imagesPerScreen);
@@ -99,15 +98,15 @@ if ($("body").data("title") === "imageView") {
     })();
 
     //append description to imageViewer
-    imageName = imageObject.name;
+    var imageName = imageObject.name;
     $(".titleHolder").append('<h2 class="imageTitle">'+imageName+'</h2>');
 
     //append image to imageViewer
-    imageUrl = imageObject.url;
+    var imageUrl = imageObject.url;
     $(".imageHolder").append('<img class="imgLarge" src="' + imageUrl + '">');
 
     //append description to imageViewer
-    imageDesc = imageObject.desc;
+    var imageDesc = imageObject.desc;
     $(".descHolder").append('<p class="imgDescription">' + imageDesc + '</p>');
 }
 
