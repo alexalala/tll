@@ -62,7 +62,7 @@ if ($("body").data("title") === "gallery") {
                 
                   
                 // append the html content in the variable to the end of the existing images in the DOM             
-                $(".mainContent").append($imgStyle);
+                $(".content").append($imgStyle);
             });
         }
         //on click load imageviewer and img description into hash
@@ -100,6 +100,8 @@ if ($("body").data("title") === "imageView") {
     //append description to imageViewer
     var imageName = imageObject.name;
     $(".titleHolder").append('<h2 class="imageTitle">'+imageName+'</h2>');
+    //append title to home button
+
 
     //append image to imageViewer
     var imageUrl = imageObject.url;

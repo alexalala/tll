@@ -26,13 +26,7 @@ img.logo {
 }
 
 .content {
-	margin-top: 50px;
-	height:100%;
-	min-height: 100%;
-	background-color: whitesmoke;
-}
-
-.mainContent {
+	padding-top: 30px;
 	margin-top: 50px;
 	height:100%;
 	min-height: 100%;
@@ -93,6 +87,7 @@ img.logo {
 	color: #343333;
 	font-size: 30px;
 	font-family: 'Open Sans', sans-serif;
+	text-align: center;
 }
 
 .imgLarge {
@@ -105,7 +100,7 @@ img.logo {
 	color: #6C6C6C;
 	font-size: 50px;
 	font-family: 'Open Sans', sans-serif;
-	padding: 30px 0 30px 0;
+	padding: 0 0 30px 0;
 }
 
 .imgDescription {
@@ -117,7 +112,6 @@ img.logo {
 	color: #6C6C6C;
 	font-size: 50px;
 	font-family: 'Open Sans', sans-serif;
-	padding: 30px 0 0 0;
 }
 
 
