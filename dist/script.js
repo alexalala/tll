@@ -42,7 +42,7 @@ var alreadyLoading;
 
 //gallery code
 if ($("body").data("title") === "gallery") {
-    $(window).scroll(function() {
+    $(window).scroll(function(alreadyLoading, imagesTaken) {
         if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true) { 
             
             alreadyLoading = true;
@@ -64,7 +64,7 @@ if ($("body").data("title") === "gallery") {
                 // append the html content in the variable to the end of the existing images in the DOM             
                 $(".contentRow").append($imgStyle); 
             });
-        };
+        }
         //on click load imageviewer and img description into hash
         $("img").ready(function(){
             $(".img1").click(function(){
@@ -74,7 +74,7 @@ if ($("body").data("title") === "gallery") {
         });
 
     });
-};
+}
 
 
 
@@ -92,7 +92,7 @@ if ($("body").data("title") === "imageView") {
 
         function getDescription(obj){
             return obj.url === findByUrl;
-        };
+        }
         
         imageObject = imagesLeft.find(getDescription) || preloadedImages.find(getDescription);
     })();
@@ -110,7 +110,7 @@ if ($("body").data("title") === "imageView") {
     //append description to imageViewer
     var imageDesc = imageObject.desc;
     $(".descHolder").append('<p class="imgDescription">' + imageDesc + '</p>');
-};
+}
 
 
 
