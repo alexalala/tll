@@ -30,7 +30,7 @@ var imagesLeft = [
     {url:'img/pics/theLoversFirLane.jpg', name:'The Lovers, Fir Lane', desc:'A black and white painting, showing a lady and gentleman strolling through Fir Lane in the winter. In the background you can see the Blue Coat School, St. John\'s beacon (Radio City Tower) and the Liverpool Metropolitan Cathedral.'}, 
     {url:'img/pics/theStreetSinger.jpg', name:'The Street Singer', desc:'A street singer earning his living.'}, 
     {url:'img/pics/theWellington.jpg', name:'The Wellington', desc:'The Wellington Public House on Picton Road, with its vibrant red exterior.'}, 
-    {url:'img/pics/victorianDrinkingFountain.jpg', name:'Victorian Drinking Fountain', desc:'After epidemics like Cholera, public drinking fountains became popular in the Victorian Age as they were a rare clean water supply for the masses. In northern cities like Liverpool and Hull, they were supplied by civic authorities.'}, 
+    {url:'img/pics/victorianDrinkingFountain.jpg', name:'Victorian Drinking Fountain', desc:'After epidemics like Cholera, public drinking fountains became popular in the Victorian Age as they were a rare clean water supply for the masses. In northern cities like Liverpool and Hull, they were supplied by civic authorities. They now remain for the most part as decoration.'}, 
     {url:'img/pics/victorianLetterbox.jpg', name:'Victorian Letterbox', desc:'This painting shows a little bit of history among today\'s 21st Century Life.'}, 
     {url:'img/pics/wavertreeTrainStation.jpg', name:'Wavertree Train Station', desc:'Wavertree Station was opened in 1891 and was on the main southern line from Liverpool Lime Street. As can be seen in the picture, the station was accessed from between the bridges that supported the lines. The station closed in 1958 and nothing now remains at that part of the track.'}, 
     {url:'img/pics/wellingtonAvenueWavertree.jpg', name:'Wellington Avenue, Wavertree', desc:'A painting of Wellington Avenue in Wavertree.'}
@@ -97,11 +97,13 @@ if ($("body").data("title") === "imageView") {
         imageObject = imagesLeft.find(getDescription) || preloadedImages.find(getDescription);
     })();
 
+
     //append description to imageViewer
     var imageName = imageObject.name;
     $(".titleHolder").append('<h2 class="imageTitle">'+imageName+'</h2>');
-    //append title to home button
 
+    //append name to breadcrumb
+    $(".here").append(imageName);
 
     //append image to imageViewer
     var imageUrl = imageObject.url;

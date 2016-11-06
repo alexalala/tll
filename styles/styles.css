@@ -33,6 +33,20 @@ img.logo {
 	background-color: whitesmoke;
 }
 
+.content ul {
+	text-align: left;
+	color: black;
+}
+
+.content li {
+	padding-left: 2px;
+}
+.content a {
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+}
+
 .img1 {
 	margin: 20px 10px 10px 10px;
 	max-width: 100%;
@@ -113,4 +127,6 @@ img.logo {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
+.breadcrumb>li+li:before {
+	padding: 0 14px 0 0;
+}
