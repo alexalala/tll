@@ -125,18 +125,18 @@ if ($("body").data("title") === "imageView") {
     //find image in array
 
     //load imageViewer page for next image using hash
-
+    /*
     var inThisArray = function(i){
         return($.inArray( imgShortDesc, i));
     };
 
     var nextImage = function() {
         if (inThisArray(preloadedImages)){
-            console.log(inThisArray(preloadedImages));
-  //          var indexOfCurrentPic = 
-  //          if (preloadedImages.lastIndexOf())
+
+            var indexOfCurrentPic
+            if (preloadedImages.lastIndexOf())
         }
-    }();
+    }();*/
 }
 
 

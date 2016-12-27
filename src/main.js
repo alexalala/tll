@@ -124,7 +124,7 @@ if ($("body").data("title") === "imageView") {
     //find image in array
 
     //load imageViewer page for next image using hash
-
+    /*
     var inThisArray = function(i){
         return($.inArray( imgShortDesc, i));
     };
@@ -135,7 +135,7 @@ if ($("body").data("title") === "imageView") {
             var indexOfCurrentPic
             if (preloadedImages.lastIndexOf())
         }
-    }();
+    }();*/
 }
 
 
