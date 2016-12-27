@@ -149,6 +149,11 @@ img.logo {
 .navbar-right {
   float: right!important;
 }
+
+form>fixs{
+
+}
+
 @media screen and (max-width: 800px) {
 	img.logo {
 		width: 70%;
