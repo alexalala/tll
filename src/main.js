@@ -111,7 +111,33 @@ if ($("body").data("title") === "imageView") {
     //append description to imageViewer
     var imageDesc = imageObject.desc;
     $(".descHolder").append('<p class="imgDescription">' + imageDesc + '</p>');
+
+
+    //function to allow a next button to scroll through pictures
+
+    //if not the last picture in preloaded images 
+
+    //else images left array
+
+    //else images array
+
+    //find image in array
+
+    //load imageViewer page for next image using hash
+    /*
+    var inThisArray = function(i){
+        return($.inArray( imgShortDesc, i));
+    };
+
+    var nextImage = function() {
+        if (inThisArray(preloadedImages)){
+
+            var indexOfCurrentPic
+            if (preloadedImages.lastIndexOf())
+        }
+    }();*/
 }
+
 
 
 
