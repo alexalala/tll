@@ -11,13 +11,13 @@ var preloadedImages = [
     {url:'img/pics/banksyInLiverpool.jpg', name:'Banksy In Liverpool', desc:'This portrays the street artist Banksy\'s graffiti rat on the Whitehouse public house on the corner of Duke Street and Berry Street.'},
     {url:'img/pics/shankly.jpg', name: 'Bill Shankly', desc:'Bill Shankly was a Scottish footballing legend best known for being the manager of Liverpool. He took them over when they were in the second division and not only got them promoted to the first division, but also won 3 division championships, 2 FA cups and one UEFA cup with them - molding them into the world class team they are today.'},
     {url:'img/pics/cambridgeStreetMission.jpg', name: 'The Cambridge Street Mission, Wavertree', desc:'A portrayal of the Cambridge Street Mission, on Cambridge Street, Wavertree. It is now student accomodation.'},
-    {url:'img/pics/cameo.jpg', name:'The Cameo Cinema', desc:'The Cameo Cinema in Wavertree became infamous for a double murder of the cinema manager and his assistant for the day\'s box office takings in 1949. George Kelly was arrested, found guilty and subsequently (and controversially) was hung for the crime.'} 
+    {url:'img/pics/cameo.jpg', name:'The Cameo Cinema', desc:'The Cameo Cinema in Wavertree became infamous for a double murder of the cinema manager and his assistant for the day\'s box office takings in 1949. George Kelly was arrested, found guilty and subsequently (and controversially) was hung for the crime.'},
+    {url:'img/pics/carlisleStreetWavertree.jpg', name:'Carlisle Street, Wavertree', desc:'This image shows Carlisle Street in the depths of winter, with the Gasometers in the background. All of the houses in this image have since been demolished in an attempt to modernise the streets.'}, 
+    {url:'img/pics/fallingStar.jpg', name:'Falling Star', desc:'A shooting star above the Wavertree skyline, showing St. Bridgets Church in shadow.'} 
 ];
 
 var images = [];
-var imagesLeft = [
-    {url:'img/pics/carlisleStreetWavertree.jpg', name:'Carlisle Street, Wavertree', desc:'This image shows Carlisle Street in the depths of winter, with the Gasometers in the background. All of the houses in this image have since been demolished in an attempt to modernise the streets.'}, 
-    {url:'img/pics/fallingStar.jpg', name:'Falling Star', desc:'A shooting star above the Wavertree skyline, showing St. Bridgets Church in shadow.'}, 
+var imagesLeft = [ 
     {url:'img/pics/gasWorksSpofforthRoad.jpg', name:'The Spofforth Road Gas Works', desc:'The background of this image shows the (now derelict) gasometers in Wavertree, built in the 1840\'s.'}, 
     {url:'img/pics/grandCinema.jpg', name:'The Grand Cinema', desc:'This picture depicts the Grand Cinema on Smithdown Road in all its glory. It no longer exists.'}, 
     {url:'img/pics/hairdresser.jpg', name:'The Hairdresser', desc:'A Wavertree Hairdressers, belonging to Bob Cochran (Bunty). At the time he only charged 20p for a haircut'}, 
@@ -54,9 +54,9 @@ if ($("body").data("title") === "gallery") {
             $(imagesTaken).each(function(index, value){
                 var $name = value.name;
                 var $image = value.url;
-                var $sliceOffUrl = $image.slice(9);
+                var $sliceOffUrl = $image.slice(6);
                 var $simpleDesc = $sliceOffUrl.split('.')[0];
-                var $imgStyle = $('<div class="col-xs-12 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
+                var $imgStyle = $('<div class="col-xs-6 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
                 images.push(value);
                 imagesLeft.splice(value, 1);
                 
