@@ -1,30 +1,44 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 content">
-			<div class="col-md-10 col-md-offset-1">
-				<ul class="breadcrumb cl-effect-1">
-					<li><a href="/">Home</a></li>
-					<li class="active">Contact</li>
-				</ul>
-				<h1 class="aboutTitle">Contact Us</h1>
-				<p class="contentText">For any enquiries about the paintings, please email us at contact@desmondross.com.</p>
-				<form action="https://formspree.io/alexmoore94@hotmail.co.uk" method="POST">
-					<div class="formInput">
-						<label for="name">Name:</label>
-					    <input type="text" name="name">
-					</div>
-					<div class="formInput">
-					    <label for="email">Your Email:</label>
-					    <input type="email" name="_replyto">
-					</div>
-					<div class="formInput">
-					    <label for ="enquiry">Your Query:</label>
-					    <textarea type="text" name="enquiry"></textarea>
-					</div>
-					<div class="formInput">
-					    <input type="submit" value="Send">
-					</div>
-				</form>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<ul class="breadcrumb cl-effect-1">
+						<li><a href="/">Home</a></li>
+						<li class="active">Contact</li>
+					</ul>
+					<h1 class="aboutTitle">Contact Us</h1>
+					<p class="contentText">For any enquiries about the paintings, simply email us at contact@desmondross.com.</p>
+					<form class="form-horizontal" action="https://formspree.io/alexmoore94@hotmail.co.uk" method="POST">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+								<div class="formInput form-group">
+									<label class="col-sm-2 control-label" for="name">Name:</label>
+									<div class="col-sm-10">
+								   		<input type="text" name="name">
+								   	</div>
+								</div>
+								<div class="formInput form-group">
+								    <label class="col-sm-2 control-label" for="email">Your Email:</label>
+								    <div class="col-sm-10">
+								    	<input type="email" name="_replyto">
+								    </div>
+								</div>
+								<div class="formInput form-group">
+								    <label class="col-sm-2 control-label" for="enquiry">Your Query:</label>
+								    <div class="col-sm-10">
+								    	<textarea type="text" name="enquiry"></textarea>
+								    </div>
+								</div>
+								<div class="formInput form-group">
+									<div class="col-sm-offset-5 col-sm-4">
+								    	<button type="submit" class="btn btn-default" value="Send">Send</button>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

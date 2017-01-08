@@ -27,6 +27,24 @@ img.logo {
 	width: 600px;
 }
 
+input {
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+}
+
+form { 
+	background-color: #f0f0f0;
+    padding-top: 2em;
+    margin-bottom: 2em;
+}
+
+label {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
 .content {
 	padding-top: 30px;
 	margin-top: 50px;
@@ -148,10 +166,6 @@ img.logo {
 
 .navbar-right {
   float: right!important;
-}
-
-form>fixs{
-
 }
 
 @media screen and (max-width: 800px) {
