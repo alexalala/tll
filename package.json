@@ -19,6 +19,7 @@
   "dependencies": {
     "bower": "^1.7.7",
     "browserify": "^13.0.0",
+    "dotenv": "^4.0.0",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "galiria": "^1.0.7",
