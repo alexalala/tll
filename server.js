@@ -29,6 +29,8 @@ app.get('/imageView', function (req, res) {
 	res.render('imageView');
 });
 
-app.listen(process.env.PORT || '3000', function() {
-	console.warn('Listening');
+var port = process.env.PORT || '3000';
+
+app.listen(port, function() {
+	console.warn('Listening ' + port);
 });
