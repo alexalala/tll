@@ -29,6 +29,10 @@ app.get('/imageView', function (req, res) {
 	res.render('imageView');
 });
 
+app.get('/4D1945FB307FA8E6BCBAE5E7EE052236.txt', function (req, res) {
+	res.render('4D1945FB307FA8E6BCBAE5E7EE052236.txt');
+});
+
 var port = process.env.PORT || '3000';
 
 app.listen(port, function() {
