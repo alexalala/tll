@@ -11,6 +11,10 @@ body {
 .header {
 	height: 100px;
 	background-color: black;
+};
+
+nav {
+	font-size: 2em;
 }
 
 footer {
@@ -123,6 +127,10 @@ label {
 	text-align: center;
 }
 
+.contentText p {
+	margin-top: 3rem;
+}
+
 .imgLarge {
 	max-width: 100%;
 	max-height: 1000px;
@@ -139,6 +147,7 @@ label {
 .imgDescription {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 25px;
+	margin-top: 2rem;
 }
 
 .title {
@@ -147,6 +156,9 @@ label {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.subtitle {
+	font-size: 1.5em;
+}
 .breadcrumb>li+li:before {
 	padding: 0 14px 0 0;
 }
@@ -155,7 +167,8 @@ label {
 	padding-top: 0px;
 }
 
-/* ---- stop navbar collapsing ----*/
+/* ---- Styles To Stop Navbar Collapsing ---- */
+
 .navbar-collapse.collapse {
   display: block!important;
 }
@@ -177,4 +190,27 @@ label {
 		width: 70%;
 		height: 70%;
 	}
+}
+
+/* ---- Media Queries ---- */
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+	.contentText {
+		font-size: 3rem;
+	}
+
+	.content ul {
+		font-size: 2.5rem;
+	}
+
+	.nav li a {
+		font-size: 2rem;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
 }
