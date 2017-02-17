@@ -195,7 +195,7 @@ label {
 /* ---- Media Queries ---- */
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
+@media only screen and (min-width : 480px) {
 
 	.contentText {
 		font-size: 3rem;
@@ -208,4 +208,9 @@ label {
 	.nav li a {
 		font-size: 2rem;
 	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
 }
