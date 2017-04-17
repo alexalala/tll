@@ -56,7 +56,7 @@ if ($("body").data("title") === "gallery") {
                 var $image = value.url;
                 var $sliceOffUrl = $image.slice(9);
                 var $simpleDesc = $sliceOffUrl.split('.')[0];
-                var $imgStyle = $('<div class="col-xs-6 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $simpleDesc + '"></figure></div>');
+                var $imgStyle = $('<div class="col-xs-6 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $name + '" name="' + $simpleDesc + '"></figure></div>');
                 images.push(value);
                 imagesLeft.splice(value, 1);
                 
@@ -68,7 +68,7 @@ if ($("body").data("title") === "gallery") {
         //on click load imageviewer and img description into hash
         $("img").ready(function(){
             $(".img1").click(function(){
-                var src = $(this).attr("alt");
+                var src = $(this).attr("name");
                 window.location.href = '/imageView#' + src;
             });
         });
@@ -100,14 +100,14 @@ if ($("body").data("title") === "imageView") {
 
     //append description to imageViewer
     var imageName = imageObject.name;
-    $(".titleHolder").append('<h2 class="imageTitle">'+imageName+'</h2>');
+    $(".titleHolder").append('<h2 class="imageTitle">' + imageName + '</h2>');
 
     //append name to breadcrumb
     $(".here").append(imageName);
 
     //append image to imageViewer
     var imageUrl = imageObject.url;
-    $(".imageHolder").append('<img class="imgLarge" src="' + imageUrl + '">');
+    $(".imageHolder").append('<img class="imgLarge" src="' + imageUrl + '" alt="' + imageName + '">');
 
     //append description to imageViewer
     var imageDesc = imageObject.desc;
