@@ -41,7 +41,7 @@ var offset = 50;
 var alreadyLoading;
 
 //gallery code
-if ($("body").data("title") === "gallery") {
+if (window.location.pathname == "/") {
     $(window).scroll(function(alreadyLoading, imagesTaken) {
         if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true) { 
             
@@ -79,7 +79,7 @@ if ($("body").data("title") === "gallery") {
 
 
 //image view page code
-if ($("body").data("title") === "imageView") {
+if (window.location.pathname.indexOf("/imageView") === 0) {
 
     //get short desc from url
     var imgShortDesc = location.hash.substr(1);
