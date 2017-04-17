@@ -56,7 +56,7 @@ if (window.location.pathname == "/") {
                 var $image = value.url;
                 var $sliceOffUrl = $image.slice(9);
                 var $simpleDesc = $sliceOffUrl.split('.')[0];
-                var $imgStyle = $('<div class="col-xs-6 col-md-6 galiria"><figure class="captionjs animated"><figcaption itemprop="name" style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $name + '" name="' + $simpleDesc + '"></figure></div>');
+                var $imgStyle = $('<div class="col-xs-6 col-md-6 galiria"><figure class="captionjs animated"><figcaption style="margin-bottom:0px; bottom:-58px;">' + $name + '</figcaption><img class="img1" src="' + $image + '" alt="' + $name + '" id="' + $simpleDesc + '"></figure></div>');
                 images.push(value);
                 imagesLeft.splice(value, 1);
                 
@@ -68,7 +68,7 @@ if (window.location.pathname == "/") {
         //on click load imageviewer and img description into hash
         $("img").ready(function(){
             $(".img1").click(function(){
-                var src = $(this).attr("name");
+                var src = $(this).attr("id");
                 window.location.href = '/imageView#' + src;
             });
         });
