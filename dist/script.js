@@ -41,7 +41,7 @@ var offset = 50;
 var alreadyLoading;
 
 //gallery code
-if (window.location.pathname == "index.html") {
+if (window.location.pathname == "/") {
     $(window).scroll(function(alreadyLoading, imagesTaken) {
         if (($(window, ".gallery").scrollTop() + $(window).height() + offset >= $(document).height()) && alreadyLoading !== true) {
 
